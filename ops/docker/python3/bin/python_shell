@@ -1,0 +1,10 @@
+#!/bin/bash
+cd `dirname $0`/../../../../
+projectPath=$(git rev-parse --show-toplevel)
+
+echo "
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+		Running the python3 console ...
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+"
+docker run -it -v $projectPath/src/gss:/home/python hxhroniegss/python3 /bin/ash
