@@ -4,24 +4,20 @@ timezone: Asia/Tokyo
 widgets:
   - id: gss
     type: menu
-    title: GSS GUI
+    title: GSS GUI DEVTOOLS
     content:
       - category: gss
         name: Python Console
         description: Run python console
         command: ops/docker/python3/bin/python_shell
-  - id: development
-    type: menu
-    title: DEVELOPMENT TOOLS
-    content:
-      - category: development
-        name: PlantUML
-        description: Create PNG from MD
-        command: ops/docker/bin/plantuml/create_image
   - id: mkdocs
     type: menu
     title: MKDOCS
     content:
+      - category: mkdocs
+        name: PlantUML
+        description: Create PNG from MD
+        command: ops/docker/bin/plantuml/create_image
       - category: mkdocs
         name: Mkdocs serve
         description: Build and run mkdocs container
@@ -44,7 +40,5 @@ layout:
             stacks:
               - id: gss
                 height: 50%
-              - id: development
-                height: 25% 
               - id: mkdocs
-                height: 25%
+                height: 50%
